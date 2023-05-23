@@ -4,9 +4,9 @@ import { protectorMiddleware, publicOnlyMiddleware } from "../middlewares/middle
 
 const userRouter = express.Router();
 
-userRouter.route("/login").all(protectorMiddleware).post(postLogin); // login
-userRouter.route("/join").all(protectorMiddleware).post(postJoin); // join
-userRouter.route("/delete").all(publicOnlyMiddleware).get(deleteUser); // delete user data
-userRouter.route("/logout").all(publicOnlyMiddleware).get(logout); // logout
+userRouter.route("/login").all(publicOnlyMiddleware).post(postLogin); // login
+userRouter.route("/join").all(publicOnlyMiddleware).post(postJoin); // join
+userRouter.route("/delete").all(protectorMiddleware).get(deleteUser); // delete user data
+userRouter.route("/logout").all(protectorMiddleware).get(logout); // logout
 
 export default userRouter;

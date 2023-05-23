@@ -2,7 +2,7 @@
 
 ### Global Router
 
-✅ / -> Home  
+/ -> Home  
 /about  
 /find -> enter the code
 
