@@ -2,9 +2,8 @@
 
 ### Global Router
 
-✅ /
-/exit  
-/levelup
+✅ /  
+/exit or /save
 
 ### ✅ User Router
 
@@ -19,6 +18,11 @@
 ✅ /delete
 ✅ /enter
 ✅ /leave
+
+### Socket Server
+
+/levelup  
+/getLocation
 
 ## TODO
 
