@@ -2,11 +2,10 @@ import bcrypt from "bcrypt";
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
-    email: { type: String, required: true, unique: true },
+    email: { type: String, required: true, unique: true }, // email
     username: { type: String, required: true }, // username 
     password: { type: String, required: true }, // password
-    code: { type: String }, // connect code 
-
+    server: { type: String },
 });
 
 userSchema.pre("save", async function () {

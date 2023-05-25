@@ -37,6 +37,7 @@ export const logout = async (req, res) => {
 
 export const deleteUser = async (req, res) => {
     const { _id } = req.session.user; // find user _id in session
+    req.session.destroy(); // delete session
     await User.findByIdAndDelete(_id); // find and delete user data at DB
     return res.send("delete User account");
 }

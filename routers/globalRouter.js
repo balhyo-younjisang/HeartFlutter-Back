@@ -1,8 +1,9 @@
 import express from "express";
-import { getHome } from "../controllers/globalController.js";
+import { postHome } from "../controllers/globalController.js";
+import { protectorMiddleware } from "../middlewares/middleware.js";
 
 const globalRouter = express.Router();
 
-globalRouter.route("/").get(getHome); // return data needed for home display
+globalRouter.route("/").all(protectorMiddleware).post(postHome); // return data needed for home display
 
 export default globalRouter;
