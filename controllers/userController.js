@@ -20,7 +20,7 @@ export const postJoin = async (req, res) => {
 export const postLogin = async (req, res) => {
     const { email, password } = req.body; // get login request data
     const user = await User.findOne({ email }); // find user data at DB using email
-    if (!user) return res.send("An account with this username does not exists"); // return error message when user is undefined
+    if (!user) return res.send("An account with this username does not exists"); // return==-= error message when user is undefined
 
     const confirm = await bcrypt.compare(password, user.password); // check password
     if (!confirm) return res.send("Wrong password"); // return error message when password is incorrect
