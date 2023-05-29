@@ -32,7 +32,3 @@ export const postHome = async (req, res) => {
 
     return res.send(returnData);
 }
-
-export const postExit = async (req, res) => {
-
-}

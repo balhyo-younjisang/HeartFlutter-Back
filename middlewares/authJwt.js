@@ -14,4 +14,8 @@ export const authJwt = (req, res, next) => {
             });
         }
     }
+    res.status(401).send({
+        ok: false,
+        message: "Not allowed"
+    });
 }
