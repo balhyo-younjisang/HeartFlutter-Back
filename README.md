@@ -30,4 +30,6 @@ after the frontend
 Alarm : How can I ring the alarm in the ios and android?  
 Group Service : One server, Many People (3~5)  
 ✅ Hosting  
+Redis Hosting
+✅ DB Hosting
 Ranking System : Compete to other server
