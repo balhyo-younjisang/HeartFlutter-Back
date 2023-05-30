@@ -41,7 +41,8 @@ export const postLogin = async (req, res) => {
         data: {
             accessToken,
             refreshToken,
-        }
+        },
+        message: "success"
     });
 }
 
