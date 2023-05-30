@@ -28,7 +28,7 @@ export const postLogin = async (req, res) => {
     }); // return==-= error message when user is undefined
 
     const confirm = await bcrypt.compare(password, user.password); // check password
-    if (!confirm) return res.send("Wrong password"); // return error message when password is incorrect
+    if (!confirm) return res.send(ok: false, message : "Wrong password"); // return error message when password is incorrect
 
     // Issued token and refresh token
     const accessToken = sign(user);
